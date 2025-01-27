@@ -1,4 +1,4 @@
-package back_end;
+package replace;
 
 public class ReplaceTextCommandTest {
 
