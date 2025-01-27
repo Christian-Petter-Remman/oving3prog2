@@ -6,6 +6,6 @@ public class TextCommand {
 
 
   String execute(String text){
-    return null;
+    return text.replace(target, replacement);
   }
 }
