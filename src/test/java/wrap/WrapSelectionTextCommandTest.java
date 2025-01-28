@@ -24,4 +24,12 @@ public class WrapSelectionTextCommandTest {
     WrapSelectionTextCommand wrapSelectionTextCommand = new WrapSelectionTextCommand("O", "E", "Hello");
     assertEquals("OHelloE\nWorld", wrapSelectionTextCommand.execute(txt));
   }
+
+  @Test
+  @DisplayName("Test negative execute method")
+  public void testNegativeExecute() {
+    String txt = "Hello\nWorld";
+    WrapSelectionTextCommand wrapSelectionTextCommand = new WrapSelectionTextCommand("O", "E", "i");
+    assertEquals("Hello\nWorld", wrapSelectionTextCommand.execute(txt));
+  }
 }
