@@ -1,5 +1,6 @@
 package org.main.api.wrap;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -10,12 +11,8 @@ public class WrapLinesTextCommand extends WrapTextCommand {
   }
 
   public String execute(String text) {
-    return Arrays.stream(text.split("\n"))
+    return text.lines()
         .map(line -> getOpening() + " " + line + " " + getEnding())
         .collect(Collectors.joining("\n"));
-  }
-
-  public String getSelection() {
-    return null;
   }
 }
