@@ -3,7 +3,9 @@ package org.main.api.replace;
 import static org.main.api.exceptions.ExceptionHandler.nullPointerException;
 import static org.main.api.exceptions.ExceptionHandler.numberInvalidException;
 
-public class ReplaceTextCommand {
+import org.main.api.ui.TextCommand;
+
+public class ReplaceTextCommand extends TextCommand {
   private final String target;
   private final String replacement;
 

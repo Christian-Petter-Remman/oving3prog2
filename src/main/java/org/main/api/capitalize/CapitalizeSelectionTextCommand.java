@@ -9,7 +9,7 @@ public class CapitalizeSelectionTextCommand extends  CapitalizeTextCommand {
 
   public String execute(String text) {
     if(text.contains(selection)) {
-      return text.replace(selection, super.capitalize(selection));
+      return text.replace(selection, super.execute(selection));
     }
     return text;
   }

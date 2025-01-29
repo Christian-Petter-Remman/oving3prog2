@@ -2,7 +2,9 @@ package org.main.api.wrap;
 
 import static org.main.api.exceptions.ExceptionHandler.nullPointerException;
 
-public class WrapTextCommand {
+import org.main.api.ui.TextCommand;
+
+public class WrapTextCommand extends TextCommand {
   private final String opening;
   private final String ending;
 

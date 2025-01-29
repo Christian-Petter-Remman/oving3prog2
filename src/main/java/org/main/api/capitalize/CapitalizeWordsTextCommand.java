@@ -9,7 +9,7 @@ public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
     String[] words = text.split(" ");
     StringBuilder sb = new StringBuilder();
     for (String word : words) {
-      sb.append(super.capitalize(word)).append(" ");
+      sb.append(super.execute(word)).append(" ");
     }
     return sb.toString().trim();
   }

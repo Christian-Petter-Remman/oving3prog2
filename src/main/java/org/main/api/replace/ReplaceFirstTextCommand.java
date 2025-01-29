@@ -11,7 +11,7 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
     numberInvalidException(target, replacement);
   }
 
-  public String execute(String text){
+  public String execute(String text) {
     return text.replaceFirst(getTarget(), getReplacement());
   }
 }
