@@ -21,11 +21,18 @@ public class ScriptTest {
     List<TextCommand> commands = new ArrayList<>();
     commands.add(new ReplaceTextCommand("old", "new"));
     commands.add(new CapitalizeTextCommand());
-
     Script script = new Script(commands);
     String text = "old text";
     assertEquals("New text", script.execute(text));
-
-
   }
+
+  @Test
+  @DisplayName("Test getTextCommands method")
+  public void testGetTextCommands() {
+    List<TextCommand> commands = new ArrayList<>();
+    commands.add(new ReplaceFirstTextCommand("old", "new"));
+    Script script = new Script(commands);
+    assertEquals(commands.getFirst(), script.getTextCommands().getFirst());
+  }
+
 }

@@ -13,6 +13,6 @@ public class CapitalizeTextCommandTest {
   @DisplayName("Test capitalize method")
   public void testCapitalize() {
     CapitalizeTextCommand capitalizeTextCommand = new CapitalizeTextCommand();
-    assertEquals("Hello", capitalizeTextCommand.capitalize("hello"));
+    assertEquals("Hello", capitalizeTextCommand.execute("hello"));
   }
 }
