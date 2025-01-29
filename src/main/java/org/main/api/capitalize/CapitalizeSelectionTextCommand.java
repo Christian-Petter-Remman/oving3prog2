@@ -7,8 +7,11 @@ public class CapitalizeSelectionTextCommand extends  CapitalizeTextCommand {
     this.selection = selection;
   }
 
-  public String execute() {
-    return super.capitalize(this.selection);
+  public String execute(String text) {
+    if(text.contains(selection)) {
+      return text.replace(selection, super.capitalize(selection));
+    }
+    return text;
   }
 
   public String getSelection() {
